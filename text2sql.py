@@ -69,6 +69,7 @@ def run_text2sql(questions):
     count = 0
     for question in questions:
         res = db_chain(question)
+        print("RES", res)
         d = {'sql': res['intermediate_steps'][0], 'result': res['intermediate_steps'][1]}
         res_filepath = os.path.join('results', 'question_' + str(idx) + '.json')
         write_json(res_filepath, d)
