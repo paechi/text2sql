@@ -29,6 +29,6 @@ python3 text2sql.py
 ```
 python3 app.py
 ```
-![app_output](result/app_output.png)
+![app_output](results/app_output.png)
 
 - You might need to provide you own openai key in .env file. I am planning to try other prompts and llms for this task. For now, the results are encouraging.
