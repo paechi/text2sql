@@ -1,0 +1,5 @@
+langchain
+openai
+clickhouse-connect
+clickhouse-sqlalchemy
+python-dotenv
