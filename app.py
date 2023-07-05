@@ -30,11 +30,11 @@ PROMPT = """Given an input question, create a syntactically correct {dialect} qu
 
     Question: {input}
     """
-db_chain = SQLDatabaseChain(llm=llm, database=db, verbose=True,return_intermediate_steps=True)
+db_chain = SQLDatabaseChain(llm=llm, database=db, verbose=True)
 
 def text2sql():
     print("Type 'exit' to quit")
-    # {"dialect":"MySQL", "table_info": "analytics", "input":"How many active agency customers did we have on January 1st, 2022?"}
+    # {"dialect":"sqlite", "table_info": "analytics", "input":"How many active agency customers did we have on January 1st, 2022?"}
     while True:
         inp = input("Enter a question: ")
         if inp.lower() == 'exit':
